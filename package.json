@@ -1,0 +1,50 @@
+{
+  "devDependencies": {
+    "@types/pg": "^8.6.6",
+    "typescript": "4.9.5"
+  },
+  "name": "yariel.dev-pg",
+  "version": "1.0.0",
+  "description": "Libreria para conexion de base de datos posgresql",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc:init": "tsc --init",
+    "build": "npm run build:web && npm run build:node",
+    "build:lib": "tsc",
+    "build:web": "tsc  --module ES6 --outDir dist",
+    "build:node": "tsc  --outDir lib",
+    "publish:login": "npm login",
+    "publish:public:": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yariel03/yariel.dev-pg.git"
+  },
+  "keywords": [
+    "yariel",
+    "yariel.dev",
+    "pg",
+    "postgres",
+    "postgresql",
+    "conexion"
+  ],
+  "author": "Yariel Baldeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yariel03/yariel.dev-pg/issues"
+  },
+  "homepage": "https://github.com/Yariel03/yariel.dev-pg#readme",
+  "dependencies": {
+    "dotenv": "16.0.3",
+    "pg": "8.9.0",
+    "yariel.dev-colors": "2.0.1"
+  }
+}

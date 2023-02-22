@@ -1,0 +1,21 @@
+declare const cloxxx: any, colorxxx: any;
+declare const Pool: any;
+declare let USER: string | undefined;
+declare let HOST: string | undefined;
+declare let DATABASE: string | undefined;
+declare let PASS: string | undefined;
+declare let PORT: string | undefined;
+declare let idleTimeoutMillis: string | number;
+declare let connectionTimeoutMillis: string | number;
+declare let MAX: string | number;
+declare const sqlConfig: {
+    user: string | undefined;
+    host: string | undefined;
+    database: string | undefined;
+    password: string | undefined;
+    port: string | undefined;
+    max: number;
+    idleTimeoutMillis: string | number;
+    connectionTimeoutMillis: string | number;
+};
+declare const db: any;
