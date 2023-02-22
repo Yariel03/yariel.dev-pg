@@ -1,6 +1,6 @@
 # yariel.dev-pg
 
-Libreria de conexion de datos a postgres
+Libreria de conexion de datos a postgres la cual devuelve un formato centralizado de salida de los datos
 
 ## install
 
@@ -14,12 +14,15 @@ $ npm install yariel.dev-pg
 //require the module
 const { exec } = require("yariel.dev-pg");
 
-//(optionally) set the SQL dialect
+//
 app.get("/con", async function (req, res) {
+  //bloque de tres lineas para funcionar
   let SQL = `SELECT * FROM public.usuarios`; //sentencia SQL
   let msgOk = "usuario encontrado"; //mensaje cuando encuentra registro
   let msgVacio = "No encontramos usuario"; //mensaje cuando el registro es 0
   const resp = await exec(SQL, msgOk, msgVacio);
+  //fin bloque de tres lineas para funcionar
+
   res.status(200).json(resp);
 });
 ```
