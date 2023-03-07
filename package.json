@@ -4,7 +4,7 @@
     "typescript": "4.9.5"
   },
   "name": "yariel.dev-pg",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Libreria para conexion de base de datos posgresql",
   "main": "lib/index.js",
   "exports": {

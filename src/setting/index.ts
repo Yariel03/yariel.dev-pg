@@ -1,5 +1,5 @@
 // cspell:disable
-const { consoleLog: cloxxx, Color: colorxxx } = require("yariel.dev-colors");
+const { consoleLog: clox, Color: col } = require("yariel.dev-colors");
 const { Pool } = require("pg");
 require("dotenv").config();
 
@@ -28,12 +28,11 @@ const db = new Pool(sqlConfig); //new sql.Pool(sqlConfig)
 (async () => {
   try {
     await db.connect();
-    cloxxx(colorxxx.Check, `Conexion exitosa a la base de datos ${DATABASE}`);
+    clox(col.Blue, `********************************************************`);
+    clox(col.Check, `Conexion exitosa a la base de datos ${DATABASE}`);
+    clox(col.Blue, `********************************************************`);
   } catch (err) {
-    cloxxx(
-      colorxxx.Error,
-      `Error conectando a la base de datos ${DATABASE}, ${err}`
-    );
+    clox(col.Error, `Error conectando a la base de datos ${DATABASE}, ${err}`);
     await db.end();
   }
 })();

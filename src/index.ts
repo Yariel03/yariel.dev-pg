@@ -17,7 +17,8 @@ const exec = async (
   } catch (error) {
     response = {
       count: -1,
-      message: ` ${msgError ?? error}`,
+      message: msgError ?? error,
+      data: [],
     };
   } finally {
     return response;
